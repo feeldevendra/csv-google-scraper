@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSV Google Scraper</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>CSV Google Scraper</h1>
+  
+  <input type="file" id="csvFile" accept=".csv">
+  <button id="uploadBtn">Upload CSV</button>
+  
+  <div>
+    <label for="throttle">Throttle (seconds):</label>
+    <input type="number" id="throttle" value="5" min="1">
+  </div>
+  
+  <button id="startBtn" disabled>Start Scraping</button>
+  
+  <h2>Results</h2>
+  <table id="resultsTable">
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Country</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Primary Contact</th>
+        <th>Secondary Contact</th>
+        <th>Website</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  
+  <button id="downloadBtn" disabled>Download CSV</button>
+  
+  <script src="libs/papaparse.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
